@@ -1,0 +1,721 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+.home {
+    min-height: 100vh;
+    padding: 80px 20px;
+}
+
+.hero {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #334155;
+    border-radius: 30px;
+    color: #93c5fd;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin: 0;
+}
+
+h1 span {
+    color: #60a5fa;
+}
+
+.hero > p {
+    color: #94a3b8;
+    font-size: 18px;
+    margin: 25px auto;
+    max-width: 650px;
+}
+
+/* =========================
+   URL FORM
+========================= */
+
+.url-form {
+    display: flex;
+    gap: 12px;
+    max-width: 700px;
+    margin: 35px auto 10px;
+}
+
+.url-form input {
+    flex: 1;
+    padding: 16px;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    background: #1e293b;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.url-form input:focus {
+    border-color: #60a5fa;
+}
+
+.url-form input::placeholder {
+    color: #64748b;
+}
+
+.url-form button {
+    padding: 16px 25px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.url-form button:hover {
+    opacity: 0.9;
+}
+
+.url-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.demo-text {
+    font-size: 13px !important;
+}
+
+/* =========================
+   RESULT
+========================= */
+
+.result {
+    max-width: 700px;
+    margin: 50px auto 0;
+    padding: 25px;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    background: #1e293b;
+}
+
+.result h2 {
+    margin-top: 0;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.result-grid div {
+    padding: 18px;
+    border-radius: 10px;
+    background: #0f172a;
+}
+
+.result-grid span,
+.result-grid small {
+    display: block;
+    color: #94a3b8;
+    margin-bottom: 8px;
+}
+
+.result-grid strong {
+    font-size: 18px;
+}
+
+.error {
+    border-color: #ef4444;
+}
+
+.error h3 {
+    color: #f87171;
+}
+
+/* =========================
+   FORMAT SELECTOR
+========================= */
+
+.format-selector {
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 25px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+}
+
+.format-selector h3 {
+    margin-top: 0;
+}
+
+.format-options {
+    display: flex;
+    gap: 12px;
+}
+
+.format-options button {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #475569;
+    border-radius: 10px;
+    background: #0f172a;
+    color: white;
+    cursor: pointer;
+}
+
+.format-options button:hover {
+    border-color: #60a5fa;
+}
+
+.format-options button.active {
+    border-color: #60a5fa;
+    background: #2563eb;
+}
+
+.resolution {
+    margin-top: 20px;
+}
+
+.resolution label {
+    display: block;
+    margin-bottom: 8px;
+    color: #94a3b8;
+}
+
+.resolution select {
+    width: 100%;
+    padding: 13px;
+    border-radius: 8px;
+    background: #0f172a;
+    color: white;
+    border: 1px solid #475569;
+    outline: none;
+}
+
+.resolution select:focus {
+    border-color: #60a5fa;
+}
+
+/* =========================
+   FILE UPLOAD
+========================= */
+
+.file-upload {
+    max-width: 700px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.file-label {
+    display: block;
+    padding: 18px;
+    border: 2px dashed #475569;
+    border-radius: 12px;
+    background: #1e293b;
+    color: #93c5fd;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.file-label:hover {
+    border-color: #60a5fa;
+    transform: translateY(-2px);
+    background: #243247;
+}
+
+.file-label input {
+    display: none;
+}
+
+.selected-file {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.upload-error {
+    color: #f87171;
+}
+
+.file-name {
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    background: #0f172a;
+    color: #93c5fd;
+    word-break: break-word;
+}
+
+/* =========================
+   YOUTUBE INFO
+========================= */
+
+.youtube-info {
+    width: min(900px, 100%);
+    margin: 35px auto 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 25px;
+    align-items: center;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+}
+
+.thumbnail-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #0f172a;
+}
+
+.youtube-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.youtube-details h2 {
+    margin: 0 0 12px;
+    font-size: 22px;
+    line-height: 1.35;
+}
+
+.channel-name {
+    color: #94a3b8;
+}
+
+.video-meta {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.video-meta div {
+    flex: 1;
+    padding: 12px;
+    background: #0f172a;
+    border-radius: 10px;
+}
+
+.video-meta span {
+    display: block;
+    color: #94a3b8;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.video-meta strong {
+    display: block;
+    word-break: break-word;
+}
+
+.watch-link {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+}
+
+.watch-link:hover {
+    opacity: 0.9;
+}
+
+/* =========================
+   MAIN DOWNLOAD BUTTON
+========================= */
+
+.download-wrapper {
+    width: min(700px, 100%);
+    margin: 25px auto 60px;
+}
+
+.download-button,
+.main-download-button {
+    display: block;
+    width: 100%;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 10px;
+    background: #16a34a;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.download-button:hover,
+.main-download-button:hover {
+    opacity: 0.9;
+}
+
+.download-button:disabled,
+.main-download-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.download-error {
+    margin-top: 10px;
+    text-align: center;
+    color: #f87171;
+}
+
+/* =========================
+   DOWNLOAD OPTIONS
+========================= */
+
+.download-options {
+    width: min(900px, 100%);
+    margin: 35px auto 70px;
+}
+
+.download-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.download-heading h2 {
+    margin-bottom: 8px;
+}
+
+.download-heading p {
+    margin: 0;
+    color: #94a3b8;
+}
+
+/* =========================
+   DOWNLOAD CATEGORY
+========================= */
+
+.download-category {
+    margin-bottom: 25px;
+    padding: 22px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+}
+
+.category-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.category-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #0f172a;
+    font-size: 22px;
+}
+
+.category-title h3 {
+    margin: 0 0 4px;
+}
+
+.category-title p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* =========================
+   DOWNLOAD OPTION GRID
+========================= */
+
+.option-header,
+.download-option {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 120px;
+    align-items: center;
+    gap: 15px;
+}
+
+.option-header {
+    padding: 0 16px 10px;
+    color: #64748b;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.option-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.download-option {
+    padding: 14px 16px;
+    background: #0f172a;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+
+.download-option:hover {
+    border-color: #475569;
+    transform: translateY(-1px);
+}
+
+.format-badge {
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background: #1d4ed8;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.file-size {
+    color: #94a3b8;
+}
+
+.download-option button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #16a34a;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.download-option button:hover {
+    opacity: 0.9;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .home {
+        padding: 50px 15px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .hero > p {
+        font-size: 16px;
+    }
+
+    .url-form {
+        flex-direction: column;
+    }
+
+    .url-form button {
+        width: 100%;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .youtube-info {
+        grid-template-columns: 1fr;
+    }
+
+    .video-meta {
+        flex-direction: column;
+    }
+
+    .option-header {
+        display: none;
+    }
+
+    .download-option {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .download-option button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .format-options {
+        flex-direction: column;
+    }
+
+    .format-options button {
+        width: 100%;
+    }
+
+    .download-category {
+        padding: 16px;
+    }
+
+    .youtube-info {
+        padding: 15px;
+    }
+
+    .youtube-details h2 {
+        font-size: 19px;
+    }
+}
+/* =========================
+   MAIN TABS
+========================= */
+
+.main-tabs {
+    width: min(700px, 100%);
+    margin: 35px auto 25px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    padding: 6px;
+
+    background: #1e293b;
+    border: 1px solid #334155;
+
+    border-radius: 14px;
+}
+
+.main-tab {
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+    color: #94a3b8;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.main-tab:hover {
+    color: white;
+    background: #243247;
+}
+
+.main-tab.active {
+    background: #2563eb;
+    color: white;
+}
+
+
+/* =========================
+   PASTE / CONVERTER SECTIONS
+========================= */
+
+.paste-section,
+.converter-section {
+    width: 100%;
+}
+
+.section-title {
+    text-align: center;
+    margin: 25px auto 10px;
+}
+
+.section-title h2 {
+    margin-bottom: 8px;
+    font-size: 26px;
+}
+
+.section-title p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+
+/* =========================
+   CONVERTER
+========================= */
+
+.converter-section .file-upload {
+    margin-top: 30px;
+}
+
+.converter-result {
+    width: 100%;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .main-tabs {
+        grid-template-columns: 1fr;
+    }
+
+    .main-tab {
+        width: 100%;
+    }
+
+    .section-title h2 {
+        font-size: 22px;
+    }
+}
+
+/* =========================
+   DOWNLOAD CATEGORY BUTTON
+========================= */
+
+.download-option-button {
+    padding: 9px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.download-option-button:hover {
+    background: #1d4ed8;
+}
+
+.download-option-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
