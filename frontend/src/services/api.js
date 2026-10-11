@@ -5,8 +5,7 @@ import axios from "axios";
 ========================= */
 
 const API = axios.create({
-    baseURL:
-        "http://localhost:5000/api"
+    baseURL: "https://yt-video-downloader-api-v25l.onrender.com/api"
 });
 
 /* =========================
