@@ -463,17 +463,21 @@ async function downloadFromUrl(req, res, next) {
         console.log("Starting yt-dlp...");
         console.log("Arguments:", args);
 
-        const ytDlp = spawn(
-            "py",
-            [
-                "-m",
-                "yt_dlp",
-                ...args
-            ],
-            {
-                windowsHide: true
-            }
-        );
+       
+const isWindows = process.platform === "win32";
+
+const ytDlp = spawn(
+    isWindows ? "py" : "python3",
+    [
+        "-m",
+        "yt_dlp",
+        ...args
+    ],
+    {
+        windowsHide: true
+    }
+);
+
 
         let errorOutput = "";
 
