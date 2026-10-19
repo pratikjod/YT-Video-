@@ -407,11 +407,13 @@ async function downloadFromUrl(req, res, next) {
             );
 
         let args = [
-             "--js-runtimes",
+            "--js-runtimes",
             "node",
             "--no-playlist",
             "--newline",
             "-o",
+            "--extractor-args",
+            "youtube:player_client=android",
             outputTemplate
         ];
 
