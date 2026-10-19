@@ -407,15 +407,17 @@ async function downloadFromUrl(req, res, next) {
             );
 
         let args = [
-            "--js-runtimes",
-            "node",
-            "--no-playlist",
-            "--newline",
-            "-o",
-            "--extractor-args",
-            "youtube:player_client=android",
-            outputTemplate
-        ];
+    "--js-runtimes",
+    "node",
+    "--no-playlist",
+    "--newline",
+
+    "--extractor-args",
+    "youtube:player_client=android",
+
+    "-o",
+    outputTemplate
+];
 
         // =========================
         // VIDEO MP4
