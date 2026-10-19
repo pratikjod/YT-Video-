@@ -407,6 +407,8 @@ async function downloadFromUrl(req, res, next) {
             );
 
         let args = [
+             "--js-runtimes",
+            "node",
             "--no-playlist",
             "--newline",
             "-o",
