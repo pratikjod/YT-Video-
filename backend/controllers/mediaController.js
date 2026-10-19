@@ -407,14 +407,26 @@ async function downloadFromUrl(req, res, next) {
             );
 
       
+
 let args = [
     "--js-runtimes",
     "node",
     "--no-playlist",
     "--newline",
+    "--sleep-requests",
+    "2",
+    "--sleep-interval",
+    "5",
+    "--max-sleep-interval",
+    "10",
+    "--retries",
+    "2",
+    "--extractor-retries",
+    "2",
     "-o",
     outputTemplate
 ];
+
 
 
         // =========================

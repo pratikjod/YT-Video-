@@ -8,6 +8,7 @@ RUN apt-get update && \
 
 # Install yt-dlp with its recommended dependencies
 RUN python3 -m pip install --break-system-packages --no-cache-dir -U "yt-dlp[default]"
+RUN python3 -m yt_dlp --version && ffmpeg -version
 
 # Backend working directory
 WORKDIR /app
